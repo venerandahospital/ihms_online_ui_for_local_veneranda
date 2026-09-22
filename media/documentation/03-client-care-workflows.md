@@ -1,11 +1,11 @@
-# Patient Care Workflows
+# Client Care Workflows
 
 This guide covers day-to-day clinical workflows: queue, opening a visit, consultations, procedures, and the pharmacy (Treatment) tab.
 
 ## Workflow diagram
 
 ```
-Registration / return patient
+Registration / return client
         │
         ▼
    Added to QUEUE (optional)
@@ -24,25 +24,25 @@ Registration / return patient
    Discharge / refer (queue updated)
 ```
 
-## Opening a patient visit from the queue
+## Opening a client visit from the queue
 
 1. Header → **Queue**.
-2. On the **Current** tab, locate the patient.
-3. Click the patient name or the **clipboard** icon in the actions column.
-4. The queue modal closes and **Patient visit** opens with that patient’s context.
+2. On the **Current** tab, locate the client.
+3. Click the client name or the **clipboard** icon in the actions column.
+4. The queue modal closes and **Client visit** opens with that client’s context.
 
 The system attempts to load:
 
-- The visit linked to the queue entry (`patientVisitId`), or
-- The **initial visit** for the patient if no visit ID is present
+- The visit linked to the queue entry (`clientVisitId`), or
+- The **initial visit** for the client if no visit ID is present
 
-Patient and visit data are held in the browser session for the visit screen.
+Client and visit data are held in the browser session for the visit screen.
 
-## Patient visit — Patient bio
+## Client visit — Client bio
 
 Use this tab to confirm:
 
-- Correct patient identity (name, file number, age, sex)
+- Correct client identity (name, file number, age, sex)
 - Visit date and attending context
 
 Correct any demographic errors according to your facility policy (some fields may be read-only for certain roles).
@@ -121,7 +121,7 @@ Review and manage charges generated from procedures, pharmacy, and other service
 
 ## Printouts
 
-Generate patient-facing or internal documents (prescriptions, summaries, lab forms) depending on templates configured at your facility.
+Generate client-facing or internal documents (prescriptions, summaries, lab forms) depending on templates configured at your facility.
 
 ## Lab, scan, and dental
 
@@ -133,7 +133,7 @@ These departments often use dedicated screens:
 | Radiology / scan | `/overview/scan` or `/scan` |
 | Dental | `/overview/dental` or `/dental` |
 
-Worklists and mobile lab views support bench processing. Results may be reflected back on the patient visit consultation tab when integrated.
+Worklists and mobile lab views support bench processing. Results may be reflected back on the client visit consultation tab when integrated.
 
 ## Discharge and referral
 
@@ -146,12 +146,12 @@ When the encounter ends:
 
 | Problem | What to check |
 |---------|----------------|
-| Cannot open visit from queue | Patient ID on queue entry; network/API connection |
+| Cannot open visit from queue | Client ID on queue entry; network/API connection |
 | Drug not in dropdown | Item not stocked, batch inactive, or search filter |
 | Cannot save prescription | Required dosage fields; stock batch selection |
 | Transfer icon missing | Pharmacy stock > 0, or total stock is 0 |
-| Tab empty | Visit not loaded; reload from queue or patient list |
+| Tab empty | Visit not loaded; reload from queue or client list |
 
 ---
 
-*Document 03 — Patient care workflows — HMS documentation v1.0*
+*Document 03 — Client care workflows — HMS documentation v1.0*

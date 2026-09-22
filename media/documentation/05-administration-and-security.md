@@ -85,7 +85,7 @@ Defines:
 - Rooms used as queue destinations
 - Which areas appear in the header department links
 
-Coordinate with queue workflow training so reception sends patients to the correct **to module**.
+Coordinate with queue workflow training so reception sends clients to the correct **to module**.
 
 ## Subscription
 

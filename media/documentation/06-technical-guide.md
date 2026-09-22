@@ -20,7 +20,7 @@ Frontend project name: `wiki` (folder: ngwiki).
 ngwiki/
 ├── src/app/              # Application modules and pages
 │   ├── overview/         # Main HMS modules (sidebar)
-│   ├── patient-visit/    # Clinical encounter workspace
+│   ├── client-visit/    # Clinical encounter workspace
 │   ├── header/           # Global header, queue
 │   ├── auth/             # Login, signup, password reset
 │   ├── services/         # API, access control, branding
@@ -89,8 +89,8 @@ When adding a new protected API:
 |-------|-----------|
 | `/login`, `/login4` | Login variants |
 | `/overview/*` | Module shell |
-| `/patient-visit` | PatientVisitComponent |
-| `/patient-visits-list` | Visit list |
+| `/client-visit` | ClientVisitComponent |
+| `/client-visits-list` | Visit list |
 | `/dashboard` | Dashboard (guarded) |
 
 Full route table: `src/app/app-routing.module.ts`.
@@ -136,7 +136,7 @@ Use Overview → **Data backup** for application-supported backup flows. IT shou
 |---------|--------|
 | 401 / 403 on API | JWT expiry, role endpoint map |
 | Blank overview | sessionStorage role; subscription guard |
-| Queue visit won't open | API `getPatientVisitByVisitId` / network tab |
+| Queue visit won't open | API `getClientVisitByVisitId` / network tab |
 | Wrong facility name | Business settings cache; clear session |
 
 ## Documentation maintenance

@@ -34,7 +34,7 @@ Administrators should confirm the correct host with your technical team before s
 
 After login, most modules live under **`/overview`**:
 
-- Collapsible sidebar groups: Dashboard, Patients, OPD, IPD, Lab, Radiology, Pharmacy, Inventory, Finance, HR, Reports, Administration, etc.
+- Collapsible sidebar groups: Dashboard, Clients, OPD, IPD, Lab, Radiology, Pharmacy, Inventory, Finance, HR, Reports, Administration, etc.
 - Click a menu item to open that module in the main content area.
 - Sidebar can run in **stacked** mode (sidebar shares space with content) or overlay mode — configured under **Business settings**.
 
@@ -42,26 +42,26 @@ After login, most modules live under **`/overview`**:
 
 Available on many screens:
 
-- **Queue** — view current patients in line; open a patient visit from the queue
-- **Department links** — quick jump to Lab, Scan, Dental, Patient visit, etc. (based on your access)
+- **Queue** — view current clients in line; open a client visit from the queue
+- **Department links** — quick jump to Lab, Scan, Dental, Client visit, etc. (based on your access)
 - **Profile / account** — user details, logout
 - **Cart / notifications** — where enabled for your role
 
-### Patient visit (clinical workspace)
+### Client visit (clinical workspace)
 
-Route: **`/patient-visit`**
+Route: **`/client-visit`**
 
 Usually opened from:
 
-- Queue (patient name or clipboard icon)
-- Patient list or search
-- Department workflows that pass patient context via session storage
+- Queue (client name or clipboard icon)
+- Client list or search
+- Department workflows that pass client context via session storage
 
 Tabs on the visit screen:
 
 | Tab | Typical use |
 |-----|-------------|
-| Patient bio | Demographics and visit identifiers |
+| Client bio | Demographics and visit identifiers |
 | Initial vitals | Temperature, BP, pulse, SpO₂, etc. |
 | Consultations | Clinical notes and consultation forms |
 | Procedures | Services and procedures for the visit |
@@ -73,10 +73,10 @@ Tabs on the visit screen:
 
 1. Open **Queue** from the header.
 2. Tabs: **Current**, **Discharged today**, **Referred today**.
-3. Click the **patient name** or the **clipboard icon** to open their visit.
+3. Click the **client name** or the **clipboard icon** to open their visit.
 4. Use **Edit** (pencil) to change status, destination module, emergency flag, or notes.
 
-The system loads the existing visit when possible; otherwise it starts from the patient’s initial visit context.
+The system loads the existing visit when possible; otherwise it starts from the client’s initial visit context.
 
 ## User profile
 
@@ -104,15 +104,15 @@ Use **Logout** from the account menu. Always log out on shared computers.
 
 ## Tips for new users
 
-- Use the queue to avoid searching for patients already in the building.
+- Use the queue to avoid searching for clients already in the building.
 - Save work on each tab before switching tabs or navigating away.
 - Long drug names in pharmacy dropdowns show full text on hover (tooltip).
 - Use **Clear field** on prescribing rows before selecting a new item.
 
 ## Getting help
 
-1. Read the module guide for your job: pharmacy, inventory, or patient care.
-2. Report issues to your facility superuser with: screen name, patient ID (if applicable), time, and what you clicked.
+1. Read the module guide for your job: pharmacy, inventory, or client care.
+2. Report issues to your facility superuser with: screen name, client ID (if applicable), time, and what you clicked.
 3. IT staff should refer to **06-technical-guide.md**.
 
 ---

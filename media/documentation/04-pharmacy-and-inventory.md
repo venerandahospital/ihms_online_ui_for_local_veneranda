@@ -8,7 +8,7 @@ Inventory is built around **hospital items** (medicines and consumables), **stoc
 
 Pharmacy interacts with inventory through:
 
-- **Patient visit → Treatment** (dispense on prescription)
+- **Client visit → Treatment** (dispense on prescription)
 - **OTC dispensary** (over-the-counter sales)
 - **Stock transfer** (move stock between stores)
 - **Overview → Inventory** modules (receive, adjust, report)
@@ -17,11 +17,11 @@ Pharmacy interacts with inventory through:
 
 | Store role | Typical use |
 |------------|-------------|
-| Pharmacy | Dispensing to patients and OTC |
+| Pharmacy | Dispensing to clients and OTC |
 | Central store | Bulk storage; transfers to pharmacy |
 | Other stores | Wards, theatre, etc. when configured |
 
-On the patient visit Treatment tab:
+On the client visit Treatment tab:
 
 - **Stock** = sum across stores
 - **Pharmacy** / **Central store** = per-location quantities
@@ -61,7 +61,7 @@ Legacy data may map old `profitMargin` values to retail until fully migrated.
 
 Use when stock must move between stores (e.g. central → pharmacy).
 
-**From patient visit:** When pharmacy quantity is zero but total stock exists, use the transfer icon on the Treatment tab (requires role permission).
+**From client visit:** When pharmacy quantity is zero but total stock exists, use the transfer icon on the Treatment tab (requires role permission).
 
 ### Access control
 
@@ -78,7 +78,7 @@ Configure under **Overview → Access control** (User access and Role access tab
 
 **Path:** Overview → Pharmacy → **OTC dispensary**
 
-Walk-in sales without a full patient visit workflow.
+Walk-in sales without a full client visit workflow.
 
 Business settings may control whether OTC includes full prescribing fields (dosage, frequency, duration) — see **Business settings → OTC include prescribing**.
 

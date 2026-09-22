@@ -10,7 +10,7 @@ The application is **multi-tenant**: each hospital or clinic can configure its o
 |----------|----------|-------------|
 | [01-system-overview.md](./01-system-overview.md) | All users | What the system does, main modules, and how areas connect |
 | [02-getting-started.md](./02-getting-started.md) | New users | Login, navigation, roles, and daily basics |
-| [03-patient-care-workflows.md](./03-patient-care-workflows.md) | Clinical staff | Queue, patient visit, consultations, procedures, pharmacy tab |
+| [03-client-care-workflows.md](./03-client-care-workflows.md) | Clinical staff | Queue, client visit, consultations, procedures, pharmacy tab |
 | [04-pharmacy-and-inventory.md](./04-pharmacy-and-inventory.md) | Pharmacy & stores | Stock receive, batches, transfers, OTC, dispensing |
 | [05-administration-and-security.md](./05-administration-and-security.md) | Admins / MD | Users, access control, business settings, subscriptions |
 | [06-technical-guide.md](./06-technical-guide.md) | IT / developers | Architecture, deployment, API connection, support |
