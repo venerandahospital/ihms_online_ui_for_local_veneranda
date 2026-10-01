@@ -2,7 +2,7 @@
 
 ## Purpose
 
-The Hospital Management System (HMS) is a web-based platform for running day-to-day operations at a health facility: registering clients, managing visits, documenting clinical care, dispensing medicines, tracking inventory, billing, laboratory and imaging workflows, and administration.
+The Hospital Management System (HMS) is a web-based platform for running day-to-day operations at a health facility: registering patients, managing visits, documenting clinical care, dispensing medicines, tracking inventory, billing, laboratory and imaging workflows, and administration.
 
 One installation can serve a single clinic or a larger hospital, depending on which modules are enabled and how user access is configured.
 
@@ -11,12 +11,12 @@ One installation can serve a single clinic or a larger hospital, depending on wh
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │  Web browser (staff workstations, tablets)                  │
-│  Angular frontend — client visit, overview modules, lab…   │
+│  Angular frontend — patient visit, overview modules, lab…   │
 └───────────────────────────┬─────────────────────────────────┘
                             │ HTTPS / HTTP (JWT authentication)
 ┌───────────────────────────▼─────────────────────────────────┐
 │  Backend API (Java / Quarkus-style health_care service)     │
-│  Clients, visits, stock, billing, users, queue, lab, etc.  │
+│  Patients, visits, stock, billing, users, queue, lab, etc.  │
 └───────────────────────────┬─────────────────────────────────┘
                             │
 ┌───────────────────────────▼─────────────────────────────────┐
@@ -28,17 +28,17 @@ Staff use a **header bar** for quick actions (queue, department shortcuts) and a
 
 ## Main functional areas
 
-### 1. Client management
+### 1. Patient management
 
-- Register and search clients
-- Client groups, profiles, visit history
+- Register and search patients
+- Patient groups, profiles, visit history
 - Appointments and referrals
-- **Queue management** — clients waiting between departments/rooms
+- **Queue management** — patients waiting between departments/rooms
 
 ### 2. Clinical care (OPD / visit)
 
-- **Client visit** screen — central workspace per encounter
-- Tabs typically include: Client bio, Initial vitals, Consultations, Procedures, Treatment (pharmacy), Finance, Printouts
+- **Patient visit** screen — central workspace per encounter
+- Tabs typically include: Patient bio, Initial vitals, Consultations, Procedures, Treatment (pharmacy), Finance, Printouts
 - Dedicated flows for **Lab**, **Scan (radiology)**, and **Dental** where configured
 
 ### 3. Inpatient (IPD) — where enabled
@@ -49,7 +49,7 @@ Staff use a **header bar** for quick actions (queue, department shortcuts) and a
 
 ### 4. Pharmacy
 
-- Prescribing and dispensing during a client visit
+- Prescribing and dispensing during a patient visit
 - **OTC dispensary** for walk-in sales
 - Stock visibility: pharmacy, central store, and total distribution
 - Stock transfer from central store when pharmacy stock is zero
@@ -70,7 +70,7 @@ Staff use a **header bar** for quick actions (queue, department shortcuts) and a
 
 ### 7. Finance
 
-- Service charges, client billing, cashier
+- Service charges, patient billing, cashier
 - Insurance billing, refunds, expenses
 - Revenue and departmental reports
 
@@ -93,8 +93,8 @@ The Overview menu also includes sections for telemedicine, insurance claims, the
 
 | Term | Meaning |
 |------|---------|
-| **Visit** | A single client encounter (OPD or related) with vitals, notes, orders, and billing |
-| **Queue entry** | Client placed in line to move from one module/room to another |
+| **Visit** | A single patient encounter (OPD or related) with vitals, notes, orders, and billing |
+| **Queue entry** | Patient placed in line to move from one module/room to another |
 | **Stock batch** | A received lot of an item with cost, sell price, and profit margins |
 | **Module / room** | Department destination in the queue (e.g. consultation, pharmacy, lab) |
 | **Role** | User type (e.g. admin, MD, clinical, pharmacy) controlling menus and API access |
@@ -103,10 +103,10 @@ The Overview menu also includes sections for telemedicine, insurance claims, the
 
 | Role (examples) | Typical screens |
 |-----------------|-----------------|
-| Reception / records | Client registration, queue, visit list |
-| Nurse | Vitals, client visit, queue |
+| Reception / records | Patient registration, queue, visit list |
+| Nurse | Vitals, patient visit, queue |
 | Doctor / clinician | Consultations, procedures, investigations |
-| Pharmacist | Client visit → Treatment tab, OTC dispensary, stock |
+| Pharmacist | Patient visit → Treatment tab, OTC dispensary, stock |
 | Store keeper | Stock receive, transfer, stock taking |
 | Cashier | Finance tab on visit, cashier module |
 | Administrator | User management, access control, business settings |
